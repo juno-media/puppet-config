@@ -16,5 +16,10 @@
             "name": "Adam Paterson",
             "email": "hello@adampaterson.co.uk"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Juno\\": "src/"
+        }
+    }
 }
