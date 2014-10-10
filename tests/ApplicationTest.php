@@ -1,13 +1,13 @@
 <?php
 
-namespace Juno;
+namespace Juno\Tests;
 
 use Symfony\Component\Console\Tester\CommandTester;
 
 /**
  * Class ApplicationTest
  */
-class ApplicationTest extends PHPUnit_Framework_TestCase
+class ApplicationTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test application init and list command.
