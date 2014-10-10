@@ -1,4 +1,7 @@
 <?php
+
+namespace Juno;
+
 use Symfony\Component\Console\Tester\CommandTester;
 
 /**
@@ -15,9 +18,15 @@ class ApplicationTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\Juno\Application', $application);
 
         $commandTester = new CommandTester($command = $application->get('list'));
-        $commandTester->execute(array('command' => $command->getName()), array('decorated' => false));
+        $commandTester->execute(
+            array('command' => $command->getName()),
+            array('decorated' => false)
+        );
 
-        $this->assertRegExp('/help   Displays help for a command/', $commandTester->getDisplay(), '->execute() returns a list of available commands');
+        $this->assertRegExp(
+            '/help   Displays help for a command/',
+            $commandTester->getDisplay(),
+            '->execute() returns a list of available commands'
+        );
     }
 }
- 
